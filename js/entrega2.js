@@ -1,22 +1,50 @@
-function calculadora(primerNumero, segundoNumero, operacion) {
-    switch (operacion) {
-        case "+":
-            return primerNumero + segundoNumero;
-        case "-":
-            return primerNumero - segundoNumero;
-        case "*":
-            return primerNumero * segundoNumero;
-        case "/":
-            return primerNumero / segundoNumero;
-        default:
-            return 0;
-    }
+class Frappe{
+   
+	constructor(pedido){
+		this.frappe;
+		this.tamanio = pedido.tamanio
+		this.chips = pedido.chips
+		this.crema = pedido.crema
+		this.salsa = pedido.salsa
+
+	}
+
+
+	entregarFrappe(){
+
+		if(this.tamanio.toUpperCase() == "GRANDE"){
+			
+			this.frappe = "Megafrappe"
+
+		}else{
+			
+			this.frappe = "frappe comun"
+		}
+
+
+		if(this.crema != "" && this.salsa != "" ){
+			
+			return "Aqui tiene su " + this.frappe + " " + this.chips + " chips, sabor a " + this.crema + " y salsa de " + this.salsa
+		
+		}else if (this.crema != "" && this.salsa == "") {
+
+			return "Aqui tiene su " + this.frappe + " " + this.chips + " chips, " + " sabor a " + this.crema
+		
+		}else{
+
+			return "Aqui tiene su " + this.frappe + " " + this.chips + " chips" 
+
+		}
+		
+	}
+
+	
 }
- let numero1 = parseInt(prompt("Ingrese el primer numero para calcular"))
- let numero2 = parseInt(prompt("Ingrese el Segundo numero para calcular"))
- let operacion = prompt("Seleccione entre suma(+), resta (-) multiplicacion(*) o division (/)")
-  alert(calculadora(numero1, numero2, operacion));
-let resultado = suma(2,3)
 
-console.log(resultado)
+let frappe = new Frappe({tamanio:"",chips:"",crema:"",salsa:""})
+frappe["tamanio"] = prompt("¿Qué tamaño de frappe queres?")
+frappe.chips = prompt("¿Lo querés con o sin chispitas de chocolate?")
+frappe.crema = prompt("¿Qué sabor de crema querrias?")
+frappe.salsa = prompt("¿Que salsa le desea?")
 
+console.log(frappe.entregarFrappe())
