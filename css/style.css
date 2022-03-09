@@ -58,21 +58,22 @@ html{
     padding: 15px 0;
     text-align: center;
     cursor: pointer;
-    background-color: white;
-    border: solid 1px grey;
+    background-color: rgba(0, 0, 0, 0.856);
+    border: solid 2px lightblue;
+    color: whitesmoke;
 }
 
 .keypad-button:hover{
-    filter: brightness(80%);
+    filter: brightness(90%);
     transition: filter .25s;
 }
 
-.keypad-button.yellow{
-    background-color: yellow;
+.keypad-button.blue{
+    background-color: rgb(24, 27, 192);
 }
 
 .keypad-button.dark{
-    background-color: lightgrey;
+    background-color: rgb(29, 15, 66);
 }
 
 .keypad-button.large{
