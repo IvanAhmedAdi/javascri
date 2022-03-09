@@ -15,17 +15,30 @@ window.addEventListener('load',()=>{
 function calculadora(button, display){
     switch (button.innerHTML) {
         case 'C':
-            borrar(display)
+            borrar(display);
             break;
 
         case '=':
-            calcular(display)
+            calcular(display);
             break;
 
         default:
-            actualizar(display, button)
+            actualizar(display, button);
             break;    
     }
 }
 
-funtion
+function calcular(display) {
+    display.innerHTML = eval(display.innerHTML)
+}
+
+function actualizar(display, button){
+    if (display.innerHTML == 0){
+        display.innerHTML = '';
+    }
+    display.innerHTML += button.innerHTML;
+}
+
+function borrar(display) {
+    display.innerHTML = 0;
+}
