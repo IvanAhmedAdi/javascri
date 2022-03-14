@@ -7,6 +7,7 @@
 }
 
 h2{
+    color: yellow;
     font-size: 50px;
 }
 
@@ -81,4 +82,8 @@ html{
 
 .keypad-button.large{
     width: 50%;
+}
+
+body{
+    background-image: url(/img/fondo.jpg);
 }
