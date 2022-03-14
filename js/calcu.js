@@ -1,3 +1,11 @@
+var elemento = document.createElement("h2");
+var contenido = document.createTextNode("CALCULADORA");
+elemento.appendChild(contenido);
+elemento.setAttribute("align", "center");
+document.body.appendChild(elemento);
+
+
+
 window.addEventListener('load',()=>{
     const display = document.querySelector('.calculator-display');
     const keypadButtons = document.getElementsByClassName('keypad-button');
@@ -42,3 +50,4 @@ function actualizar(display, button){
 function borrar(display) {
     display.innerHTML = 0;
 }
+
