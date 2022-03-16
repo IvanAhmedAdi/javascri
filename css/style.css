@@ -42,8 +42,11 @@ html{
     padding: 25px 15px;
     width: 100%;
     text-align: right;
-    border: 1px solid grey;
+    border: 1px solid black;
     overflow-x: auto;
+    background-color: rgba(5, 51, 5, 0.815);
+    color: white;
+    font-size: 25px;
 }
 
 .calculator-keypad{
@@ -55,34 +58,43 @@ html{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    padding: 1px 2px;
+    font-size: 25px;
 }
 
 .keypad-button{
     width: 25%;
-    padding: 15px 0;
+    padding: 15px 5px;
     text-align: center;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.856);
-    border: solid 2px lightblue;
+    background-color: #1a0321;
+    border: solid 2px rgba(119, 136, 153, 0.185);
     color: whitesmoke;
+    transition: 0.2s;
 }
 
 .keypad-button:hover{
-    filter: brightness(90%);
-    transition: filter .25s;
+    background: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 30px #a945c7, 0 0 70px #a945c7 ;
+    transition-delay: 0.1s;
 }
 
-.keypad-button.blue{
-    background-color: rgb(24, 27, 192);
-}
 
-.keypad-button.dark{
-    background-color: rgb(29, 15, 66);
-}
 
 .keypad-button.large{
     width: 50%;
+    
 }
+
+.keypad-button.result:hover{
+    background-color: rgb(65, 238, 172);
+    box-shadow: 0 0 10px rgb(65, 238, 172), 0 0 30px rgb(65, 238, 172), 0 0 70px rgb(65, 238, 172) ;
+    transition-delay: 0.1s;
+}
+    
+
+
+
 
 body{
     background-image: url(/img/fondo.jpg);
