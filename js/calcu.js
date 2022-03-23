@@ -1,3 +1,27 @@
+lst = [{
+    name: "Watermaster",
+    age: 26
+},{
+    name: "Ivan",
+    age: 26
+
+}];
+
+localStorage.setItem("list",JSON.stringify(lst));
+
+lst = JSON.parse(localStorage.getItem("list"));
+
+lst.forEach(element => {
+    let elements = document.getElementById("elements");
+    let div = document.createElement("div");
+    div.innerHTML = element.name + " "+ element.age;
+    elements.appendChild(div);
+});
+
+
+
+
+
 var elemento = document.createElement("h2");
 var contenido = document.createTextNode("CALCULADORA");
 elemento.appendChild(contenido);
