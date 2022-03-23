@@ -1,3 +1,4 @@
+/*
 lst = [{
     name: "Watermaster",
     age: 26
@@ -7,9 +8,9 @@ lst = [{
 
 }];
 
-localStorage.setItem("list",JSON.stringify(lst));
+localStorage.setItem("list",JSON.stringify(lst));*/
 
-lst = JSON.parse(localStorage.getItem("list"));
+lst = JSON.parse(localStorage.getItem("list")); 
 
 lst.forEach(element => {
     let elements = document.getElementById("elements");
